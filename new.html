@@ -1,0 +1,296 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Your Web Page</title>
+  <style>
+    body {
+      background-color: #fdca33;
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+    
+  .card-deck {
+    display: flex;
+    justify-content: center;
+  }
+
+  .selected {
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+    .color-box {
+      width: 200px; /* Set your desired width */
+      height: 100px; /* Set your desired height */
+      background-color: #f2f9ff;
+    }
+
+    .card-deck {
+      display: flex;
+      justify-content: space-between;
+      margin: 20px; /* Adjust the margin as needed */
+    }
+
+    .card {
+      width: 22%; /* Adjust the width as needed */
+      margin-bottom: 20px;
+      background-color: #ffffff;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    .card:hover {
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.2); /* Add a subtle hover effect */
+    }
+
+    .card.selected {
+      border: 2px solid #ffcc00; /* Add a border or change the style to indicate selection */
+    }
+
+    .card.hidden {
+      display: none; /* Hide the card */
+    }
+
+    .card:first-child .card-body {
+      text-align: center;
+    }
+
+    .card:first-child h5.card-title {
+      font-size: 1.2em; /* Adjust the font size as needed */
+    }
+
+    .card-body {
+      padding: 24px;
+      text-align: center; 
+    }
+
+    .card-footer {
+      background-color: #f8f9fa;
+      padding: 10px;
+      border-bottom-left-radius: 8px;
+      border-bottom-right-radius: 8px;
+    }
+    .highlighted-text {
+      color: #161b1e;
+      font-weight: bold; 
+      font-size: 1.5em;
+    }
+    .highlighted-text1 {
+      color: #5b51f2; 
+    }
+    .bold-title {
+      font-weight: bold; 
+      text-align: center; 
+      font-size: 1.2em;
+    }
+
+    @media only screen and (max-width: 768px) {
+        .card-deck {
+    display: flex;
+    justify-content: center;
+  }
+
+  .selected {
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    overflow:auto;
+  }
+.body{
+    overflow: visible;
+    height: auto;
+
+}
+    .color-box {
+        margin: 0 auto; 
+      background-color: #f2f9ff;
+    }
+
+    .card-deck {
+        display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    margin: 10px; }
+
+    .card {
+        width: 45%; /* Adjust the width as needed */
+    margin: 10px; /* Adjust the margin as needed */
+    box-sizing: border-box;
+      background-color: #ffffff;
+     
+    }
+    .card .card-body {
+    padding: 12px; /* Adjust the padding as needed */
+  }
+    .card:hover {
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.2); /* Add a subtle hover effect */
+    }
+
+    .card.selected {
+      border: 2px solid #ffcc00; /* Add a border or change the style to indicate selection */
+    }
+
+    .card.hidden {
+      display: none; /* Hide the card */
+    }
+
+    .card:first-child .card-body {
+      text-align: center;
+    }
+
+    .card:first-child h5.card-title {
+      font-size: 1.2em; /* Adjust the font size as needed */
+    }
+
+    .card-body {
+      padding: 24px;
+      text-align: center; 
+    }
+
+    .card-footer {
+      background-color: #f8f9fa;
+      padding: 10px;
+      border-bottom-left-radius: 8px;
+      border-bottom-right-radius: 8px;
+    }
+    .highlighted-text {
+      color: #161b1e;
+      font-weight: bold; 
+      font-size: 1.5em;
+    }
+    .highlighted-text1 {
+      color: #5b51f2; 
+    }
+    .bold-title {
+      font-weight: bold; 
+      text-align: center; 
+      font-size: 1.2em;
+    }
+    }
+  </style>
+</head>
+<body>
+
+  <section>
+    <div class="card-deck">
+      <div class="card" onclick="selectCard(this)">
+        <div class="card-body">
+          <h5 class="card-title">Private Limited Company</h5>
+          <div class="color-box"> Starting <br><br><span class="highlighted-text">Rs 999</span><br><br>
+            <span class="highlighted-text1"> + Govt Fees</span>
+          </div>
+          <p class="card-text">The default option for start-ups and growing businesses as only private limited companies can raise venture capital. This type of company offers limited fabilty for its shareholders with certain restrictions placed on the ownership. Private limited company registration, directors may be different from shareholders.</p>
+        </div>
+        <div class="card-footer">
+          <span class="highlighted-text1">Know more</span>
+        </div>
+      </div>
+      <div class="card" onclick="selectCard(this)">
+        <div class="card-body">
+          <h5 class="card-title bold-title">Limited Liability
+            Partnership
+            </h5>
+          <div class="color-box"> Starting <br><br><span class="highlighted-text">Rs 999</span><br><br>
+            <span class="highlighted-text1"> +statuary fees</span>
+          </div><br>
+          <p class="card-text">LLP was introduced to provide a
+            form of business that is easy to
+            maintain and to help owners by
+            providing them with limited liability.
+            Limited Liability Partnership
+            Registration combines the benefits
+            of a partnership with that of a
+            limited liability company.
+            </p>
+        </div>
+        <br>
+        <div class="card-footer">
+          <span class="highlighted-text1">Know more</span>
+        </div>
+      </div>
+      <div class="card" onclick="selectCard(this)">
+        <div class="card-body">
+          <h5 class="card-title bold-title">One Person<br>
+            Company</h5>
+          <div class="color-box"> Starting <br><br><span class="highlighted-text">Rs 5998</span><br><br>
+            <span class="highlighted-text1">*All Inclusive</span>
+          </div>
+          <p class="card-text">The best structure for solo
+            entrepreneurs looking beyond the
+            opportunities a sole proprietorship
+            affords. Here, a single promoter
+            gains full authority over the
+            company, restricting his/her liabilty
+            towards their contributions to the
+            enterprise. The said person wil be
+            the sole shareholder and director.</p>
+        </div>
+        <div class="card-footer">
+          <span class="highlighted-text1">Know more</span>
+        </div>
+      </div>
+      <div class="card" onclick="selectCard(this)">
+        <div class="card-body">
+          <h5 class="card-title bold-title">Partnership<br>
+            Firm
+            </h5>
+          <div class="color-box"> Starting <br><br><span class="highlighted-text">Rs 999</span><br><br>
+            <span class="highlighted-text1"> +Statuary fees</span>
+          </div><br>
+          <p class="card-text">A business structure in which two
+            or more individuals manage a
+            business per the terms in
+            Partnership Deed. Its best suitable
+            for home businesses that are
+            unlikely to take any debt due to low
+            cost, ease of setting up and
+            minimal compliance requirements.</p>
+        </div>
+        <div class="card-footer">
+          <span class="highlighted-text1">Know more</span>
+        </div>
+      </div>
+
+      
+
+    </div>
+  </section>
+  
+  
+
+  <script>
+    function selectCard(selectedCard) {
+      const allCards = document.querySelectorAll('.card');
+      const cardDeck = document.querySelector('.card-deck');
+  
+      allCards.forEach(card => {
+        card.classList.add('hidden');
+      });
+  
+      selectedCard.classList.remove('hidden');
+      selectedCard.classList.add('selected');
+  
+      const cardIndex = Array.from(allCards).indexOf(selectedCard);
+      const cardWidth = selectedCard.offsetWidth;
+      const spacing = 10; // Adjust the spacing as needed
+  
+      const scrollOffset = cardIndex * (cardWidth + spacing) - (cardDeck.offsetWidth - cardWidth) / 2;
+      cardDeck.scrollTo({ left: scrollOffset, behavior: 'smooth' });
+    }
+  </script>
+  
+  
+  
+  
+</body>
+</html>
+
+
